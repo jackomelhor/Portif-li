@@ -1,0 +1,54 @@
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VITOR SYSTEM v1.0</title>
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/boot.css" />
+  <link rel="stylesheet" href="css/desktop.css" />
+  <link rel="stylesheet" href="css/icons.css" />
+  <link rel="stylesheet" href="css/windows.css" />
+  <link rel="stylesheet" href="css/taskbar.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <section id="boot-screen" class="boot-screen" aria-label="Tela de inicialização">
+      <div id="boot-text" class="boot-screen__text"></div>
+      <p id="boot-hint" class="boot-screen__hint">
+        Clique ou pressione qualquer tecla para liberar o <strong>som do boot</strong>.
+      </p>
+    </section>
+
+    <main id="desktop-screen" class="desktop-screen" aria-label="Desktop do sistema">
+      <section id="desktop-icons" class="desktop-screen__icons" aria-label="Ícones do desktop"></section>
+
+      <section id="windows-layer" class="desktop-screen__windows" aria-label="Área das janelas"></section>
+
+      <aside class="desktop-fallback-note" aria-hidden="true">
+        <strong>Sistema carregado</strong>
+        O wallpaper, os ícones, as janelas arrastáveis e a barra de tarefas
+        serão exibidos aqui assim que o boot terminar.
+      </aside>
+
+      <footer id="taskbar" class="desktop-screen__taskbar" aria-label="Barra de tarefas">
+        <div class="taskbar__system-name">VITOR SYSTEM</div>
+        <div id="taskbar-windows" class="taskbar__windows"></div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/drag.js"></script>
+  <script src="js/taskbar.js"></script>
+  <script src="js/windowManager.js"></script>
+  <script src="js/desktop.js"></script>
+  <script src="js/boot.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+:root {
+  --font-system: "Tahoma", "Verdana", "Segoe UI", sans-serif;
+  --font-terminal: "Courier New", "Lucida Console", monospace;
+
+  --color-screen-black: #000000;
+  --color-boot-text: #d7d7d7;
+
+  --color-desktop-fallback: #5aa45a;
+
+  --color-text-primary: #111111;
+  --color-text-inverse: #ffffff;
+  --color-text-muted: #2f2f2f;
+
+  --color-window-bg: #c0c0c0;
+  --color-window-title-start: #0a2a9d;
+  --color-window-title-end: #2b59d8;
+  --color-window-title-inactive: #7c7c7c;
+
+  --color-button-face: #c0c0c0;
+  --color-button-hover: #d8d8d8;
+
+  --color-border-light: #ffffff;
+  --color-border-mid: #808080;
+  --color-border-dark: #404040;
+
+  --color-taskbar-bg: #c0c0c0;
+  --color-taskbar-border-top: #f5f5f5;
+
+  --window-width-default: 520px;
+  --window-height-default: 340px;
+
+  --desktop-icon-size: 48px;
+  --desktop-icon-gap: 8px;
+
+  --taskbar-height: 42px;
+
+  --boot-z-index: 1000;
+  --desktop-z-index: 1;
+  --window-base-z-index: 100;
+  --taskbar-z-index: 900;
+
+  --shadow-window: 3px 3px 0 rgba(0, 0, 0, 0.28);
+  --transition-fast: 120ms ease;
+  --transition-medium: 220ms ease;
+  --transition-slow: 380ms ease;
+}

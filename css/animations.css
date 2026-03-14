@@ -1,0 +1,111 @@
+@keyframes bootCursorBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bootScanline {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes bootFadeOut {
+  0% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+
+  100% {
+    opacity: 0;
+    filter: brightness(1.15);
+  }
+}
+
+@keyframes desktopFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes desktopIconAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes iconHoverFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes windowOpen {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.92);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes windowMinimize {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+}
+
+.desktop-screen.is-visible {
+  animation: desktopFadeIn var(--transition-slow) both;
+}
+
+.desktop-icon {
+  animation: desktopIconAppear var(--transition-medium) both;
+}
+
+.desktop-icon:hover {
+  animation: iconHoverFloat var(--transition-fast) forwards;
+}
+
+.os-window.is-opening {
+  animation: windowOpen var(--transition-medium) both;
+}
+
+.os-window.is-minimizing {
+  animation: windowMinimize var(--transition-fast) both;
+}

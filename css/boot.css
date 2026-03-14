@@ -1,0 +1,96 @@
+body.is-booting {
+  cursor: progress;
+}
+
+.boot-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 24px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.02) 50%, transparent 50%),
+    var(--color-screen-black);
+  background-size: 100% 4px, 100% 100%;
+  color: var(--color-boot-text);
+  z-index: var(--boot-z-index);
+  overflow: hidden;
+}
+
+.boot-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.03), transparent 65%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02), transparent 20%, transparent 80%, rgba(255, 255, 255, 0.02));
+  pointer-events: none;
+}
+
+.boot-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.02) 45%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.02) 55%,
+    transparent 100%
+  );
+  animation: bootScanline 4s linear infinite;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.boot-screen.is-exiting {
+  animation: bootFadeOut var(--transition-slow) forwards;
+}
+
+.boot-screen.is-hidden {
+  display: none;
+}
+
+.boot-screen__text {
+  position: relative;
+  z-index: 2;
+  white-space: pre-line;
+  font-family: var(--font-terminal);
+  font-size: 18px;
+  line-height: 1.65;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.18);
+  max-width: min(880px, 90vw);
+  user-select: none;
+}
+
+.boot-screen__text.is-typing::after,
+.boot-screen__text.is-waiting::after {
+  content: "_";
+  display: inline-block;
+  margin-left: 3px;
+  color: var(--color-boot-text);
+  animation: bootCursorBlink 0.85s steps(1, end) infinite;
+}
+
+.boot-screen__text.is-waiting::after {
+  margin-left: 0;
+}
+
+.boot-screen__hint {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  z-index: 2;
+  font-family: var(--font-terminal);
+  font-size: 13px;
+  color: rgba(215, 215, 215, 0.78);
+  letter-spacing: 0.03em;
+}
+
+.boot-screen__hint strong {
+  color: #ffffff;
+  font-weight: 700;
+}
