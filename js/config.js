@@ -108,8 +108,8 @@ window.VITOR_OS_CONFIG = {
         name: "LifeBoard",
         image: "assets/projects/LifeBoard-preview.png",
         description: "Dashboard pessoal interativo que reúne clima em tempo real, tarefas, calendário e diário em uma interface moderna, com modo claro e escuro e dados salvos localmente.",
-        githubUrl: "https://github.com/",
-        demoUrl: "https://example.com/",
+        githubUrl: "https://jackomelhor.github.io/life-board/",
+        demoUrl: "https://jackomelhor.github.io/life-board/",
       }
 
       /*
